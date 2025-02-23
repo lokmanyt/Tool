@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AI-powered video face swap tool with real-time preview, customization options, and fast processing. Swap faces seamlessly in videos.">
+    <meta name="keywords" content="video face swap, AI face swap, deepfake, face swap tool, video editing">
+    <meta name="author" content="Your Website Name">
+    <title>AI Video Face Swap Tool</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/face-api.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+        }
+        main {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .upload-section, .preview-section, .settings-section {
+            margin-bottom: 20px;
+        }
+        video, canvas {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+        .ads-section {
+            margin: 20px 0;
+        }
+        button {
+            padding: 10px 20px;
+            border: none;
+            background-color: #28a745;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+        @media (max-width: 600px) {
+            main {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>AI Video Face Swap Tool</h1>
+    </header>
+    
+    <main>
+        <section class="upload-section">
+            <label for="videoUpload">Upload Video:</label>
+            <input type="file" id="videoUpload" accept="video/*">
+            <label for="imageUpload">Upload Face Image:</label>
+            <input type="file" id="imageUpload" accept="image/*">
+        </section>
+
+        <section class="preview-section">
+            <video id="videoPreview" controls></video>
+            <canvas id="canvasOutput"></canvas>
+        </section>
+
+        <section class="settings-section">
+            <label for="blendIntensity">Blend Intensity:</label>
+            <input type="range" id="blendIntensity" min="0" max="1" step="0.1">
+            
+            <label for="swapAccuracy">Swap Accuracy:</label>
+            <input type="range" id="swapAccuracy" min="0" max="1" step="0.1">
+        </section>
+
+        <button id="processVideo">Start Face Swap</button>
+        <button id="downloadVideo" style="display: none;">Download Video</button>
+    </main>
+    
+    <aside class="ads-section">
+        <!-- Google AdSense Ad Code -->
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="YOUR-ADSENSE-ID"
+             data-ad-slot="YOUR-AD-UNIT-ID"
+             data-ad-format="auto"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+    </aside>
+    
+    <script src="script.js"></script>
+</body>
+</html>
